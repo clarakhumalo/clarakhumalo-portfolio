@@ -1,0 +1,32 @@
+Create Venv: python -m venv djangovenv
+Start Venv: djangovenv\Scripts\activate.bat
+Install Django: python -m pip install Django
+Create App: python manage.py startapp page-name
+Run Server: python manage.py runserver
+Next: Create Templates folder
+Next: Create a html file inside it
+Next: Update Settings to include the new view under INSTALLED APPS
+Next: python manage.py migrate
+Next: Add a model to models
+Next: python manage.py makemigrations projects
+Next: python manage.py migrate
+Next: Open Python shell - python manage.py shell
+Next: from projects.models import Project
+Next (View Table): Project.objects.all()
+Next (Add to DB): project = Project(name='Pomodoro Timer', video=r'projects\assets\videos\pomodoro-timer-app-clip.mp4', tools='Visual Studio Code, GitHub', skills='Java, JavaFX, SceneBuilder, Version Control', link=r'https://github.com/clarakhumalo/PomodoroTimerApp')
+Next (Save changes): project.save()
+Next (See if table got member): Project.objects.all().values()
+For LOOP: >>> for x in members_list:
+...   x.save()
+
+To update a record we have to get it from the DB:
+    from projects.models import Project
+    save it in a variable (4 is the index) > x = Project.objects.all()[4] 
+    x.name will give the projects name
+    x.name = "new name" will change it
+To delete: x.delete()
+(1, {'projects.Project': 1}) tells us how many items were deleted
+
+Update Table (In Models file): simply add it to the function e.g. phone = models.IntegerField() OR joined_date = models.DateField()
+ALWAYS make migrations to save changes > python manage.py makemigrations members
+This will also prompt you to state whether you want to add defaults or let the values be null
