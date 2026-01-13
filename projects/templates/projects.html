@@ -9,10 +9,10 @@
         <ul>
             {% for project in projects %}
                 <h1>{{ project.name }}</h1>
-                <video src="{{ project.video.url }}" controls></video>
+                <video src="{{ project.video }}" controls></video>
                 <p>Tools: {{ project.tools }}</p>
                 <p>Skills: {{ project.skills }}</p>
-                <a href="{{ project.link }}">Project Link</a>
+                <a href="{{ project.link }}">View on GitHub</a>
             {% endfor %}
         </ul>
     </body>
