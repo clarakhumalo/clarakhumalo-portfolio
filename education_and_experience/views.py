@@ -1,13 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-from .models import Project
+from .models import EducationAndExperience
 
-def projects(request):
-  myprojects = Project.objects.all().values()
-  template = loader.get_template('projects.html')
+def education_and_experience(request):
+  myeducationandexperience = EducationAndExperience.objects.all().values()
+  template = loader.get_template('education-and-experience.html')
   context = {
-    'myprojects': myprojects,
+    'myeducationandexperience': myeducationandexperience,
   }
   return HttpResponse(template.render(context, request))
 

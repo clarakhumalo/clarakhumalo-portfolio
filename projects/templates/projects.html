@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Clara Khumalo Projects</title>
-    </head>
-    <body>
-        <ul>
-            {% for project in projects %}
-                <h1>{{ project.name }}</h1>
-                <video src="{{ project.video }}" controls></video>
-                <p>Tools: {{ project.tools }}</p>
-                <p>Skills: {{ project.skills }}</p>
-                <a href="{{ project.link }}">View on GitHub</a>
-            {% endfor %}
-        </ul>
-    </body>
-</html>
+{% extends "master.html" %}
+
+{% block title %}Clara Khumalo Projects{% endblock %}
+
+{% block content %}
+        <nav>
+            <a href="/">Home</a>
+            <a href="/education-and-experience">Education and Experience</a>
+            <a href="/projects">Projects</a>
+            <a href="/skills-and-proficiency">Skills and Proficiency</a>
+            <a href="/socials">Socials</a>
+        </nav>
+        {% for project in myprojects %}
+            <h1><a href="projects/{{ project.name }}">{{ project.name }}</a></h1>
+            <video src="{{ project.video }}" controls></video>
+            <p>Tools: {{ project.tools }}</p>
+            <p>Skills: {{ project.skills }}</p>
+            <a href="{{ project.link }}">View on GitHub</a>
+        {% endfor %}
+{% endblock %}
