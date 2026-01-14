@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'projects',
     'education_and_experience',
+    'skills_and_proficiencies',
+    'socials',
 ]
 
 MIDDLEWARE = [
@@ -61,7 +63,13 @@ ROOT_URLCONF = 'clara_khumalo_dev_portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+            BASE_DIR / 'projects/templates',
+            BASE_DIR / 'education_and_experience/templates',
+            BASE_DIR / 'skills_and_proficiencies/templates',
+            BASE_DIR / 'socials/templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

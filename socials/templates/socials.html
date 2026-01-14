@@ -1,0 +1,18 @@
+{% extends "master.html" %}
+
+{% block title %}Clara Khumalo Projects{% endblock %}
+
+{% block content %}
+<nav>
+    <a href="/">Home</a>
+    <a href="/education-and-experience">Education and Experience</a>
+    <a href="/projects">Projects</a>
+    <a href="/skills-and-proficiencies">Skills and Proficiency</a>
+    <a href="/socials">Socials</a>
+</nav>
+{% for social in mysocials %}
+<h1>{{ social.platform_name }}</h1>
+<img src="{{ social.image }}" alt="{{ social.social_username }}">
+<a href="{{ social.profile_link }}">View Profile</a>
+{% endfor %}
+{% endblock %}
