@@ -1,19 +1,12 @@
 {% extends "master.html" %}
 
-{% block title %}Clara Khumalo Projects{% endblock %}
+{% block title %}Skills And Proficiencies{% endblock %}
 
 {% block content %}
-        <nav>
-            <a href="/">Home</a>
-            <a href="/education-and-experience">Education and Experience</a>
-            <a href="/projects">Projects</a>
-            <a href="/skills-and-proficiencies">Skills and Proficiency</a>
-            <a href="/socials">Socials</a>
-        </nav>
-        {% for skill_and_proficiency in myskillsandproficiencies %}
-            <h2 src="{{ skill_and_proficiency.skill }}" controls></h2>
-            <p>Extras: {{ skill_and_proficiency.extras }}</p>
-            <p>Icon: {{ skill_and_proficiency.icon }}</p>
-            <p>Percentage: {{ skill_and_proficiency.skill_percentage }}</p>
-        {% endfor %}
+{% for skill_and_proficiency in myskillsandproficiencies %}
+<h2 src="{{ skill_and_proficiency.skill }}" controls></h2>
+<p>Extras: {{ skill_and_proficiency.extras }}</p>
+<p>Icon: {{ skill_and_proficiency.icon }}</p>
+<p>Percentage: {{ skill_and_proficiency.skill_percentage }}</p>
+{% endfor %}
 {% endblock %}

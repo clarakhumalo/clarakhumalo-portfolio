@@ -12,7 +12,7 @@ def projects(request):
   return HttpResponse(template.render(context, request))
 
 def main(request):
-  template = loader.get_template('C:/Users/De/Documents/Side Projects/HTML & CSS/clara_khumalo_dev_portfolio/templates/main.html')
+  template = loader.get_template('../templates/main.html')
   return HttpResponse(template.render())
 
 def testing(request):

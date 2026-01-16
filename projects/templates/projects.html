@@ -1,15 +1,8 @@
 {% extends "master.html" %}
 
-{% block title %}Clara Khumalo Projects{% endblock %}
+{% block title %}Clara Khumalo's Projects{% endblock %}
 
 {% block content %}
-        <nav>
-            <a href="/">Home</a>
-            <a href="/education-and-experience">Education and Experience</a>
-            <a href="/projects">Projects</a>
-            <a href="/skills-and-proficiencies">Skills and Proficiency</a>
-            <a href="/socials">Socials</a>
-        </nav>
         {% for project in myprojects %}
             <h1>{{ project.name }}</h1>
             <video src="{{ project.video }}" controls></video>

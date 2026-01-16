@@ -1,29 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education and Experience</title>
-</head>
-<body>
-    {% extends "master.html" %}
+{% extends "master.html" %}
 
 {% block title %}Education and Experience{% endblock %}
 
 {% block content %}
-    <nav>
-        <a href="/">Home</a>
-        <a href="/education-and-experience">Education and Experience</a>
-        <a href="/projects">Projects</a>
-        <a href="/skills-and-proficiencies">Skills and Proficiency</a>
-        <a href="/socials">Socials</a>
-    </nav>
     {% for educationandexperience in myeducationandexperience %}
-        <h1>{{ educationandexperience.field_or_occupation }}</h1>
-        <p>Company or Institution: {{ educationandexperience.company_or_institution }}</p>
-        <p>Description: {{ educationandexperience.description }}</p>
-        <p>Duration: {{ educationandexperience.duration }}</p>
+    <h1>{{ educationandexperience.field_or_occupation }}</h1>
+    <p>Company or Institution: {{ educationandexperience.company_or_institution }}</p>
+    <p>Description: {{ educationandexperience.description }}</p>
+    <p>Duration: {{ educationandexperience.duration }}</p>
     {% endfor %}
 {% endblock %}
-</body>
-</html>

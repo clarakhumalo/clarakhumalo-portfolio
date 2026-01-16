@@ -12,7 +12,7 @@ def education_and_experience(request):
   return HttpResponse(template.render(context, request))
 
 def main(request):
-  template = loader.get_template('clara_khumalo_dev_portfolio/main.html')
+  template = loader.get_template('../templates/main.html')
   return HttpResponse(template.render())
 
 def testing(request):
