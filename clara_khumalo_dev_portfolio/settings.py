@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 from pathlib import Path
 import os
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -46,7 +49,9 @@ INSTALLED_APPS = [
     'education_and_experience',
     'skills_and_proficiencies',
     'socials',
-]
+    'about_me',
+    'home'
+] 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -69,6 +74,7 @@ TEMPLATES = [
             BASE_DIR / 'education_and_experience/templates',
             BASE_DIR / 'skills_and_proficiencies/templates',
             BASE_DIR / 'socials/templates',
+            BASE_DIR / 'about_me/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {

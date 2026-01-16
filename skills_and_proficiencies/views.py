@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-from .models import Skills_And_Proficiencies
+from .models import SkillsAndProficiencies
 
 def skills_and_proficiencies(request):
-  myskillsandproficiencies = Skills_And_Proficiencies.objects.all().values()
+  myskillsandproficiencies = SkillsAndProficiencies.objects.all().values()
   template = loader.get_template('skills-and-proficiencies.html')
   context = {
     'myskillsandproficiencies': myskillsandproficiencies,
