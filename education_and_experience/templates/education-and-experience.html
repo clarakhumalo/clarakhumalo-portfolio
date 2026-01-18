@@ -3,10 +3,10 @@
 {% block title %}Education and Experience{% endblock %}
 
 {% block content %}
-    {% for educationandexperience in myeducationandexperience %}
-    <h1>{{ educationandexperience.field_or_occupation }}</h1>
-    <p>Company or Institution: {{ educationandexperience.company_or_institution }}</p>
-    <p>Description: {{ educationandexperience.description }}</p>
-    <p>Duration: {{ educationandexperience.duration }}</p>
+    {% for education_and_experience in myeducationandexperience %}
+    <h1>{{ education_and_experience.field_or_occupation }}</h1>
+    <p>Company or Institution: {{ education_and_experience.company_or_institution }}</p>
+    <p>Description: {{ education_and_experience.description }}</p>
+    <p>Duration: {{ education_and_experience.duration }}</p>
     {% endfor %}
 {% endblock %}

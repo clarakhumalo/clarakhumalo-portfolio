@@ -4,7 +4,7 @@
 
 {% block content %}
 {% for skill_and_proficiency in myskillsandproficiencies %}
-<h2 src="{{ skill_and_proficiency.skill }}" controls></h2>
+<h2 controls>{{skill_and_proficiency.skill}}</h2>
 <p>Extras: {{ skill_and_proficiency.extras }}</p>
 <p>Icon: {{ skill_and_proficiency.icon }}</p>
 <p>Percentage: {{ skill_and_proficiency.skill_percentage }}</p>
