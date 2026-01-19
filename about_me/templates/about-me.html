@@ -3,11 +3,11 @@
 {% block title %}About Me{% endblock %}
 
 {% block content %}
-<!-- {% for aboutme in myskillsandproficiencies %} -->
-<iframe src="{{ aboutme.image }}" controls></iframe>
+{% for aboutme in myaboutme %}
+<img width="300" height="370" src="{{ aboutme.image }}" alt="{{ aboutme.name }}">
 <h2>{{ aboutme.name }}</h2>
 <h3>{{ aboutme.title }}</h3>
 <p>{{ aboutme.description }}</p>
 <p><a href="{{ aboutme.link }}">GITHUB</a></p>
-<!-- {% endfor %} -->
+{% endfor %}
 {% endblock %}

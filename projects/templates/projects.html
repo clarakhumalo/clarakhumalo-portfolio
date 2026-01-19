@@ -5,7 +5,9 @@
 {% block content %}
         {% for project in myprojects %}
             <h1>{{ project.name }}</h1>
-            <video src="{{ project.video }}" controls></video>
+            <video width="370" height="300" controls>
+                <source src="{{ project.video }}" type="video/mp4">
+            </video>
             <p>Tools: {{ project.tools }}</p>
             <p>Skills: {{ project.skills }}</p>
             <a href="{{ project.link }}">View on GitHub</a>
