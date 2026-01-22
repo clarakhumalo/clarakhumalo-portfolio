@@ -3,13 +3,24 @@
 {% block title %}Clara Khumalo's Projects{% endblock %}
 
 {% block content %}
-        {% for project in myprojects %}
-            <h1>{{ project.name }}</h1>
-            <video width="370" height="300" controls>
-                <source src="{{ project.video }}" type="video/mp4">
-            </video>
-            <p>Tools: {{ project.tools }}</p>
-            <p>Skills: {{ project.skills }}</p>
-            <a href="{{ project.link }}">View on GitHub</a>
-        {% endfor %}
+<button onclick="scrollLeft()" id="left scroll-button" title="Go left">prev</button>
+<button onclick="scrollRight()" id="right scroll-button" title="Go right">></button>
+
+<div class="projects-div">
+    {% for project in myprojects %}
+    <div class="project-wrapper">
+    <div class="project">
+        <p>{{ project.video.url }}</p>
+
+        <h1>{{ project.name }}</h1>
+        <video controls>
+            <source src="{{ project.video}}" type="video/mp4">
+        </video>
+        <p>Tools: {{ project.tools }}</p>
+        <p>Skills: {{ project.skills }}</p>
+        <a href="{{ project.link }}">View on GitHub</a>
+    </div>
+</div>
+    {% endfor %}
+</div>
 {% endblock %}

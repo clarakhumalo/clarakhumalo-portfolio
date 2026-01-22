@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    font: 600 13px 'Gravitas One', serif;
+    letter-spacing: 0.7px;
+    color: #ffffff;
+}
+
+a {
+    background-color: #000047;
+    color: #ffffff;
+    padding: 10px;
+}
+
+a:hover,
+nav a:active {
+    background-color: #ffffff;
+    color: #1c1c84 !important;
+}
+
+nav {
+    margin-top: 3vh;
+    margin-left: 15vw;
+    width: 70vw;
+}
+
+.projects-div {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 10px;
+    background: #c4c4c43f;
+    width: 70vw;
+    overflow: hidden;
+    margin-left: 15vw;
+    border-radius: 3vw;
+}
+
+.project {
+    width: 30vw;
+    height: 70vh;
+    margin: 40px auto;
+    padding: 23px;
+    background-image: linear-gradient(to right, #000047, #1c1c84);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    box-shadow: 0 5px 7px -1px rgba(0, 0, 0, 0.23);
+    animation: horizontalScroll 17s linear infinite;
+    align-items: center;
+    text-align: center;
+    border-radius: 1.7vw;
+}
+
+.project video {
+    border: 3px solid #ffffff;
+    border-radius: 3px;
+    width: 97%;
+    height: 70%;
+    margin-left: 1.5%;
+}
+
+.project p {
+    margin-bottom: 15px;
+    height: fit-content;
+}
+
+.projects-div:hover .project {
+    animation-play-state: paused;
+}
+
+.project-wrapper:hover {
+    transform: scale(1.03);
+}
+
+.about-me-background {
+    margin-top: 0%;
+    height: 100%;
+    background-image: linear-gradient(to right, #000047, #1c1c84);
+}
+
+@keyframes horizontalScroll {
+    from{
+        transform: translateX(0vw);
+    }
+
+    to {
+        transform: translateX(-100vw);
+    }
+}
