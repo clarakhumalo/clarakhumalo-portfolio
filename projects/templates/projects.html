@@ -8,19 +8,22 @@
 
 <div class="projects-div">
     {% for project in myprojects %}
-    <div class="project-wrapper">
-    <div class="project">
-        <p>{{ project.video.url }}</p>
+    {% if project.video %}
 
-        <h1>{{ project.name }}</h1>
-        <video controls>
-            <source src="{{ project.video}}" type="video/mp4">
-        </video>
-        <p>Tools: {{ project.tools }}</p>
-        <p>Skills: {{ project.skills }}</p>
-        <a href="{{ project.link }}">View on GitHub</a>
+    <div class="project-wrapper">
+        <div class="project">
+            <h1>{{ project.name }}</h1>
+            <video width="320" height="240" controls>
+                <source src="/media/{{project.video}}" type="video/mp4">
+            </video>
+            <p>Tools: {{ project.tools }}</p>
+            <p>Skills: {{ project.skills }}</p>
+            <a href="{{ project.link }}">View on GitHub</a>
+        </div>
     </div>
-</div>
+    {% else %}
+    <p>No video uploaded.</p>
+    {% endif %}
     {% endfor %}
 </div>
 {% endblock %}

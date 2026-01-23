@@ -67,26 +67,34 @@ nav {
     height: fit-content;
 }
 
+.project p {
+    margin-bottom: 15px;
+    height: fit-content;
+}
+
 .projects-div:hover .project {
     animation-play-state: paused;
 }
 
 .project-wrapper:hover {
-    transform: scale(1.03);
+    transform: scale(1.1);
+}
+
+
+@keyframes horizontalScroll {
+    0% {
+        transform: translateX(-16.6666666667vw);
+    }
+
+    100% {
+        transform: translateX(116.6666666667vw);
+    }
 }
 
 .about-me-background {
-    margin-top: 0%;
-    height: 100%;
-    background-image: linear-gradient(to right, #000047, #1c1c84);
-}
-
-@keyframes horizontalScroll {
-    from{
-        transform: translateX(0vw);
-    }
-
-    to {
-        transform: translateX(-100vw);
-    }
+    margin-top: -30vh;
+    height: 130vh;
+    background-color: #000047;
+    /* background: linear-gradient(to right, #000047, #1c1c84); */
+    /* background-image: linear-gradient(to right, #000047, #1c1c84); */
 }

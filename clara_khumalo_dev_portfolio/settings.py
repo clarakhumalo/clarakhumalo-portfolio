@@ -15,6 +15,8 @@ import os
 
 from django.conf import settings
 from django.conf.urls.static import static
+import mimetypes 
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 MEDIA_URL = '/media/'
@@ -24,6 +26,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+mimetypes.add_type("video/mp4", ".mp4", True) 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/

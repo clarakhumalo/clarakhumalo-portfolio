@@ -1,15 +1,14 @@
-<div class="about-me-background">
 {% extends "master.html" %}
 
 {% block title %}About Me{% endblock %}
-
-{% block content %}
-{% for aboutme in myaboutme %}
-<img width="300" height="370" src="{{ aboutme.image }}" alt="{{ aboutme.name }}">
-<h2>{{ aboutme.name }}</h2>
-<h3>{{ aboutme.title }}</h3>
-<p>{{ aboutme.description }}</p>
-<p><a href="{{ aboutme.link }}">GITHUB</a></p>
-{% endfor %}
-{% endblock %}
+<div class="about-me-background">
+    {% block content %}
+        {% for aboutme in myaboutme %}
+            <img width="300" height="370" src="{{ aboutme.image }}" alt="{{ aboutme.name }}">
+            <h2>{{ aboutme.name }}</h2>
+            <h3>{{ aboutme.title }}</h3>
+            <p>{{ aboutme.description }}</p>
+            <p><a href="{{ aboutme.link }}">GITHUB</a></p>
+        {% endfor %}
+    {% endblock %}
 </div>

@@ -14,3 +14,9 @@ class Project(models.Model):
   def __str__(self):
     return f"{self.name} Project"
   
+
+for v in Project.objects.all():
+  if v.video.name.startswith('videos/'):
+    v.video.name = f'videos/{v.video.name}'
+    v.save(update_fields=['video'])
+    print(f"Fixed video path for project: {v.name}")
